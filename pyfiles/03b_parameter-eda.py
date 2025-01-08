@@ -29,7 +29,7 @@ print(loaded_data)
 
 # ## 2. Extract parameters
 
-# In[6]:
+# In[19]:
 
 
 import pickle
@@ -76,8 +76,8 @@ for participant_data in loaded_data:
     phasic_component = eda_data - tonic_component
     
     # Detect SCR peaks in the phasic component
-    peak_threshold = 0.02  # Threshold for detecting peaks
-    peaks, _ = find_peaks(phasic_component, height=peak_threshold, distance=sampling_frequency)
+    peak_threshold = 0.1  # Threshold for detecting peaks
+    peaks, _ = find_peaks(phasic_component, height=peak_threshold, distance=30)
     
     # Compute SCR amplitude (height of detected peaks)
     scr_amplitudes = phasic_component[peaks]
