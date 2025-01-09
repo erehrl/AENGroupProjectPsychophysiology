@@ -1,0 +1,21 @@
+dag {
+bb="-2.295,-2.58,2.22,2.915"
+"baseline stress level" [pos="0.799,-1.503"]
+"change in biosignals" [outcome,pos="1.633,1.076"]
+"environmental factors e.g. room temperature" [pos="-0.495,-1.364"]
+"spider exposure" [exposure,pos="-1.835,1.076"]
+"stress response" [pos="0.083,1.069"]
+movement [pos="-0.220,0.153"]
+"baseline stress level" -> "change in biosignals"
+"baseline stress level" -> "spider exposure"
+"baseline stress level" -> "stress response"
+"baseline stress level" -> movement
+"environmental factors e.g. room temperature" -> "baseline stress level"
+"environmental factors e.g. room temperature" -> "change in biosignals"
+"environmental factors e.g. room temperature" -> "spider exposure"
+"environmental factors e.g. room temperature" -> movement
+"spider exposure" -> "stress response"
+"stress response" -> "change in biosignals"
+movement -> "change in biosignals"
+movement -> "spider exposure"
+}
